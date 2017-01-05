@@ -3,6 +3,9 @@
 
 线上地址：59.110.137.214
 
+目前进度：前端布局设计（front-end-layout）
+
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Auth
+Auth::routes();
+
+//首页
+Route::get('/', 'HomeController@index');

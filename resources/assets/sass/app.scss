@@ -1,9 +1,45 @@
-
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+//----------------------------------------------------------
+//------------------     header
+//----------------------------------------------------------
+.z-nav{
+  position: absolute;
+  top: 0;left: 0;right: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+  //背景颜色
+  @media (min-width: 768px) { background-color: transparent;color: #6CA6CD; }
+  @media (max-width: 768px) { background-color: white;color: #6CA6CD; }
+  //字体颜色
+  @media (min-width: 768px) {
+    .navbar-brand{ color: #6CA6CD; }.navbar-brand:hover{ color: white; }
+    .navbar-nav{ li{ a{  color: #6CA6CD;  } a:hover{  color: white;  } } }
+  }
+  .search{
+    margin: 0;
+    padding-top: 13px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    input{
+    }
+  }
+}
+
+//----------------------------------------------------------
+//------------------     footer
+//----------------------------------------------------------
+footer {
+  margin-top: 45px;
+  padding-left: 20px;
+  border-top: 1px solid #eaeaea;
+
+  .about {
+    font-size: 20px;
+  }
+}
