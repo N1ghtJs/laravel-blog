@@ -48,3 +48,45 @@ footer {
     font-size: 20px;
   }
 }
+
+//----------------------------------------------------------
+//------------------     panel
+//----------------------------------------------------------
+//z-panel 面板
+.z-panel{
+  margin-bottom: 20px;
+  border: 1px solid #e2e1e1;
+  font-size: 14px;
+  .z-panel-header{
+    padding: 8px 15px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #F8F8F8;
+    text-align: center;
+    color: gray;
+  }
+  .z-panel-body{
+    background-color: white;
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: left;
+      li{
+        padding: 10px;
+        border-bottom: 1px solid #eeeeee;
+        display:block;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------
+//------------------     头像
+//----------------------------------------------------------
+.z-avatar{
+    margin: 10px;
+    border-radius: 50%;
+}

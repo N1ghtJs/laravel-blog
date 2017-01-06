@@ -1376,7 +1376,7 @@ html {
 }
 
 body {
-  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  font-family: "Times new roman", "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   font-size: 14px;
   line-height: 1.6;
   color: #636b6f;
@@ -6866,7 +6866,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  font-family: "Times new roman", "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7000,7 +7000,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  font-family: "Times new roman", "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7744,6 +7744,45 @@ footer {
 
 footer .about {
   font-size: 20px;
+}
+
+.z-panel {
+  margin-bottom: 20px;
+  border: 1px solid #e2e1e1;
+  font-size: 14px;
+}
+
+.z-panel .z-panel-header {
+  padding: 8px 15px;
+  border-bottom: 1px solid #eeeeee;
+  background-color: #F8F8F8;
+  text-align: center;
+  color: gray;
+}
+
+.z-panel .z-panel-body {
+  background-color: white;
+}
+
+.z-panel .z-panel-body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.z-panel .z-panel-body ul li {
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.z-avatar {
+  margin: 10px;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=app.css.map */
