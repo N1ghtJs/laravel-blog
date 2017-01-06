@@ -7732,6 +7732,10 @@ button.close {
   font-family: "Microsoft YaHei";
 }
 
+.z-imax-img {
+  overflow: hidden;
+}
+
 footer {
   margin-top: 45px;
   padding-left: 20px;

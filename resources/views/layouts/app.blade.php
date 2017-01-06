@@ -25,12 +25,9 @@
     @include('layouts._header')
 
     <div class="container">
-      <div class="col-md-offset-1 col-md-10">
         @yield('content')
-      </div>
+        @include('layouts._footer')
     </div>
-
-    @include('layouts._footer')
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
