@@ -82,6 +82,74 @@ footer {
     }
   }
 }
+//----------------------------------------------------------
+//------------------     article
+//----------------------------------------------------------
+//z-article 文章模板
+.z-article{
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+  .picture{
+    height: 160px;
+    overflow: hidden;
+    img{
+      height: 100%;
+    }
+  }
+  .content{
+    font-family: "Microsoft YaHei";
+    h5{
+      display:block;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    p{
+      margin-top: 30px;
+    }
+  }
+}
+
+//----------------------------------------------------------
+//------------------     轮播
+//----------------------------------------------------------
+//z-imax 轮播巨幕
+.z-imax{
+  .left{
+    position: absolute;
+    top: 0;left: 0;bottom: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    .button{
+      padding: 20px 10px 20px 10px;
+      font-size: 30px;
+      color: grey;
+    }
+    .button:hover{
+      border-radius: 0 2px 2px 0;
+      background-color: #2B2B2B;
+      filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;
+    }
+  }
+  .right{
+    position: absolute;
+    top: 0;right: 0;bottom: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    .button{
+      padding: 20px 10px 20px 10px;
+      font-size: 30px;
+      color: grey;
+    }
+    .button:hover{
+      border-radius: 2px 0 0 2px;
+      background-color: #2B2B2B;
+      filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5;
+    }
+  }
+}
 
 //----------------------------------------------------------
 //------------------     头像

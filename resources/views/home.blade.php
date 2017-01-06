@@ -7,10 +7,25 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                @yield('left-content')
+                <!-- 轮播 -->
+                @include('shared.slides')
+
+                <!-- 最新文章 -->
+                <div class="z-panel">
+                    <div class="z-panel-header" style="text-align: left;">
+                        最新文章
+                    </div>
+                    <div class="z-panel-body">
+                        @include('shared.article')
+                    </div>
+                </div>
             </div>
+
             <div class="col-md-3">
+                <!-- 作者信息 -->
                 @include('shared.author_info')
+
+                <!-- 热门文章 -->
                 <div class="z-panel">
                     <div class="z-panel-header">
                         热门文章
@@ -25,6 +40,8 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- 最新留言 -->
                 <div class="z-panel">
                     <div class="z-panel-header">
                         最新留言
