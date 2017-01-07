@@ -29,5 +29,8 @@
                 </div>
             </div>
         </div>
+        <a href="https://github.com/SadCreeper" target="_blank">
+            <img src="/img/author/github.png" alt="" style="padding: 10px;">
+        </a>
     </div>
 </div>
