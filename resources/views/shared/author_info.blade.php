@@ -4,7 +4,7 @@
     </div>
     <div class="z-panel-body" style="text-align: center;">
         <div class="">
-            <img class="z-avatar" src="{{ Auth::user()->gravatarAuthor('100') }}">
+            <img class="z-avatar" src="img/author/avatar.jpg" style="height:100px; width:100px;">
         </div>
 
         {{--微信弹出框--}}

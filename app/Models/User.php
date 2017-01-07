@@ -37,11 +37,4 @@ class User extends Authenticatable
         $hash = md5(strtolower(trim($this->attributes['email'])));
         return "http://www.gravatar.com/avatar/$hash?s=$size";
     }
-    //获取作者 Gravatar 头像
-    public function gravatarAuthor($size = '100')
-    {
-        $email = '87826632@qq.com';//作者邮箱
-        $hash = md5(strtolower(trim($email)));
-        return "http://www.gravatar.com/avatar/$hash?s=$size";
-    }
 }
