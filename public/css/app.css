@@ -7868,4 +7868,93 @@ footer .about {
   border-radius: 50%;
 }
 
+.z-admin-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #2C2D2E;
+  overflow: auto;
+}
+
+.z-admin-menu .header {
+  color: #ADADAD;
+  padding: 20px 0 20px 50px;
+  border-bottom: 1px solid #3C3D3E;
+}
+
+.z-admin-menu .list {
+  padding: 10px 30px 0 30px;
+}
+
+.z-admin-menu ul {
+  padding: 0;
+}
+
+.z-admin-menu li {
+  list-style: none;
+  border-bottom: 1px solid #3C3D3E;
+  padding: 10px 0 10px;
+}
+
+.z-admin-menu a {
+  text-decoration: none;
+  position: relative;
+  padding-left: 30px;
+  color: #666666;
+}
+
+.z-admin-menu a:hover {
+  color: white;
+}
+
+.z-admin-menu span {
+  position: absolute;
+  left: 0;
+}
+
+.z-admin-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.z-admin-menu::-webkit-scrollbar-track {
+  background-color: #2C2D2E;
+}
+
+.z-admin-menu::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.z-admin-box {
+  margin-left: 300px;
+  height: 100vh;
+  background-color: #EEEEEE;
+  overflow: auto;
+}
+
+.z-admin-box .header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 63px;
+  width: 100%;
+  background-color: white;
+}
+
+.z-admin-box .content {
+  padding: 20px;
+}
+
+.z-admin-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.z-admin-box::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
 /*# sourceMappingURL=app.css.map */
