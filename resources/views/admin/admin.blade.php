@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title', '管理后台') - lhz的个人主页</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
