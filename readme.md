@@ -3,7 +3,26 @@
 
 线上地址：59.110.137.214
 
-目前进度：前端布局设计（front-end-layout）
+# 功能
+## 用户
+- 登录
+- 注册
+## 文章
+- 最新文章
+- 新增文章（后台）
+- 文章列表（后台）
+- 编辑文章（后台）
+- Markdown 编辑器
+
+# 扩展包
+- caouecs/laravel-lang 中文语言包
+- graham-campbell/markdown Markdown 解析器
+
+# 安装方法（稍后推出更详细的安装方法）
+- 安装 homestead 虚拟机
+- 克隆代码
+- 代码根目录执行 composer install
+
 
 
 # Laravel PHP Framework

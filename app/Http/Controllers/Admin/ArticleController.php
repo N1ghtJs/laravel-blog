@@ -12,7 +12,7 @@ class ArticleController extends Controller
     //文章列表页
     public function index()
     {
-        $articles = Article::paginate(20);
+        $articles = Article::orderBy('created_at','desc')->paginate(20);
         return view('admin.article.index', compact('articles'));
     }
 
@@ -37,7 +37,7 @@ class ArticleController extends Controller
         ]);
 
         session()->flash('success', '添加成功');
-        return redirect()->route('article.create');
+        return redirect()->route('article.index');
     }
 
     //编辑文章页
@@ -63,7 +63,7 @@ class ArticleController extends Controller
         ]);
 
         session()->flash('success', '编辑成功');
-        return redirect()->route('article.index');
+        return back();
     }
 
     //文章->删除

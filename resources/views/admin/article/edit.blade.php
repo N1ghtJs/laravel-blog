@@ -21,7 +21,7 @@
                     <label for="picture">上传封面图片</label>
                     <input type="file" id="picture" name="picture">
                 </div> -->
-                <button type="submit" class="btn btn-default">完成</button>
+                <button type="submit" class="btn btn-default">保存</button>
             </form>
 
         </div>
