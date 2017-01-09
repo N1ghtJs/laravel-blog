@@ -7,6 +7,8 @@
             <img class="z-avatar" src="/img/author/avatar.jpg" style="height:100px; width:100px;">
         </div>
 
+        <p>do something interesting</p>
+
         {{--微信弹出框--}}
         <a href="" data-toggle="modal" data-target="#wechatModal">
             <img src="/img/author/wechat.png" alt="wechat" style="padding: 10px;">
