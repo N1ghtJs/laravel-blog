@@ -4,7 +4,7 @@
     </div>
     <div class="z-panel-body" style="text-align: center;">
         <div class="">
-            <img class="z-avatar" src="img/author/avatar.jpg" style="height:100px; width:100px;">
+            <img class="z-avatar" src="/img/author/avatar.jpg" style="height:100px; width:100px;">
         </div>
 
         {{--微信弹出框--}}
@@ -14,7 +14,7 @@
         <div class="modal fade" id="wechatModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <img src="img/author/wechatQR.png" alt="wechatQR">
+                    <img src="/img/author/wechatQR.png" alt="wechatQR">
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div class="modal fade" id="qqModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <img src="img/author/qqQR.jpg" alt="qqQR">
+                    <img src="/img/author/qqQR.jpg" alt="qqQR">
                 </div>
             </div>
         </div>
