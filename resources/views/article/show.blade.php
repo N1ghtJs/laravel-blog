@@ -15,7 +15,7 @@
             </div>
             <div class="z-panel-body" style="padding:20px;">
                 <img src="/img/article/2.jpg" style="width: 100%; margin-bottom:20px;">
-                {{ $article->content }}
+                {!! $article->content !!}
             </div>
         </div>
     </div>
