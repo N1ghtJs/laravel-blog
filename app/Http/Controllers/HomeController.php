@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Article;
+
 class HomeController extends Controller
 {
     /**
@@ -13,6 +15,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //获取动态流-最新文章
+        $articles_new = Article::new();
+
+        return view('home', compact('articles_new'));
     }
 }

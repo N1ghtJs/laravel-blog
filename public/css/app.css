@@ -7957,4 +7957,27 @@ footer .about {
   background-color: #555;
 }
 
+.z-table {
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+}
+
+.z-table tr th {
+  padding: 5px;
+  background-color: #333333;
+  color: white;
+  text-align: left;
+  border: 1px solid #CCCCCC;
+}
+
+.z-table tr td {
+  padding: 5px;
+  border: 1px solid #CCCCCC;
+}
+
+.z-table .bottom {
+  background-color: #CCCCCC;
+}
+
 /*# sourceMappingURL=app.css.map */

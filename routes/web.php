@@ -15,10 +15,13 @@
 Auth::routes();
 
 //首页
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 
 //管理后台
 Route::group(['middleware' => ['auth'],'namespace' => 'Admin','prefix' => 'admin'],function(){
     //首页
-    Route::get('/','AdminController@index');
+    Route::get('/','AdminController@index')->name('admin');
+
+    //文章资源路由
+    Route::resource('article','ArticleController');
 });

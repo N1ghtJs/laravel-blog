@@ -233,3 +233,28 @@ footer {
     background-color: #555;
   }
 }
+//----------------------------------------------------------
+//------------------     table
+//----------------------------------------------------------
+//表格
+.z-table{
+  width: 100%;
+  background-color: white;
+  border-collapse: collapse;
+  tr{
+    th{
+      padding: 5px;
+      background-color: #333333;
+      color: white;
+      text-align: left;
+      border: 1px solid #CCCCCC;
+    }
+    td{
+      padding: 5px;
+      border: 1px solid #CCCCCC;
+    }
+  }
+  .bottom{
+    background-color: #CCCCCC;
+  }
+}

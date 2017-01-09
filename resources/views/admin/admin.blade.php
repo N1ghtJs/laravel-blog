@@ -27,11 +27,12 @@
         <div class="header">管理后台</div>
         <ul CLASS="list">
 
-            <li><a href="{{ url('admin') }}"><span class="glyphicon glyphicon-cog"></span>面板</a></li>
+            <li><a href="{{ route('admin') }}"><span class="glyphicon glyphicon-cog"></span>面板</a></li>
 
             <li><a href="#article-admin" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>文章管理</a></li>
             <ul id="article-admin" class="collapse">
-                <li><a href="{{ url('admin') }}">新增文章</a></li>
+                <li><a href="{{ route('article.create') }}">新增文章</a></li>
+                <li><a href="{{ route('article.index') }}">文章列表</a></li>
             </ul>
 
 
@@ -67,6 +68,7 @@
 
         </div>
         <div class="content">
+            @include('shared.messages')
             @yield('content')
         </div>
 
