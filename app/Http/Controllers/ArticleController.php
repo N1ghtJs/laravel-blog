@@ -18,11 +18,32 @@ class ArticleController extends Controller
         $article->content = Markdown::convertToHtml($article->content);
 
         //更新浏览量
-        $article->view = $article->view + 1;
-        $article->update([
-            'view' => $article->view,
-        ]);
+        Article::update_view($id);
 
-        return view('article.show', compact('article'));
+        //获取动态流-热门文章
+        $articles_hot = Article::hot();
+
+        return view('article.show', compact('article', 'articles_hot'));
+    }
+
+    public function list()
+    {
+        $articles = Article::orderBy('created_at','desc')->paginate(10);
+
+        //获取动态流-热门文章
+        $articles_hot = Article::hot();
+
+        return view('article.list', compact('articles', 'articles_hot'));
+    }
+
+    public function search(Request $request)
+    {
+        $articles = Article::search($request->key);
+
+        //获取动态流-热门文章
+        $articles_hot = Article::hot();
+
+        session()->flash('success', '搜索完成');
+        return view('article.list',compact('articles', 'articles_hot'));
     }
 }

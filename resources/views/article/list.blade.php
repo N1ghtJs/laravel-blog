@@ -5,20 +5,19 @@
 @section('content')
 <div class="row">
     <div class="col-md-9">
-        <!-- 轮播 -->
-        @include('shared.slides')
-
-        <!-- 最新文章 -->
+        <!-- 文章列表 -->
         <div class="z-panel">
             <div class="z-panel-header" style="text-align: left;">
-                最新文章
+                文章列表
             </div>
             <div class="z-panel-body">
-                @foreach ($articles_new as $article)
+                @foreach ($articles as $article)
                     @include('shared.article')
                 @endforeach
             </div>
         </div>
+
+        {{ $articles->render() }}
     </div>
 
     <div class="col-md-3">

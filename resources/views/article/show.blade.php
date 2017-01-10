@@ -25,36 +25,10 @@
         @include('shared.author_info')
 
         <!-- 热门文章 -->
-        <div class="z-panel">
-            <div class="z-panel-header">
-                热门文章
-            </div>
-            <div class="z-panel-body">
-                <ul>
-                    <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
-                    <li>bbb</li>
-                    <li>ccc</li>
-                    <li>ddd</li>
-                    <li>eee</li>
-                </ul>
-            </div>
-        </div>
+        @include('shared.article_hot')
 
         <!-- 最新留言 -->
-        <div class="z-panel">
-            <div class="z-panel-header">
-                最新留言
-            </div>
-            <div class="z-panel-body">
-                <ul>
-                    <li><span>dlflj</span>：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
-                    <li>bbb</li>
-                    <li>ccc</li>
-                    <li>ddd</li>
-                    <li>eee</li>
-                </ul>
-            </div>
-        </div>
+        @include('shared.comment_new')
     </div>
 </div>
 @endsection
