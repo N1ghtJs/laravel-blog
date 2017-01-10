@@ -27,7 +27,7 @@ class Article extends Model
     //搜索文章
     static public function search($key)
     {
-        $article = Article::where('title', 'like', '%'.$key.'%')->paginate(10);
+        $article = Article::where('title', 'like', '%'.$key.'%')->paginate(20);
         return $article;
     }
 

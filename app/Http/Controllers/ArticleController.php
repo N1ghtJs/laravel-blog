@@ -28,7 +28,8 @@ class ArticleController extends Controller
 
     public function list()
     {
-        $articles = Article::orderBy('created_at','desc')->paginate(10);
+        //获取全部文章
+        $articles = Article::orderBy('created_at','desc')->paginate(20);
 
         //获取动态流-热门文章
         $articles_hot = Article::hot();
@@ -38,6 +39,7 @@ class ArticleController extends Controller
 
     public function search(Request $request)
     {
+        //搜索文章
         $articles = Article::search($request->key);
 
         //获取动态流-热门文章

@@ -12,7 +12,7 @@
             </div>
             <div class="z-panel-body">
                 @foreach ($articles as $article)
-                    @include('shared.article')
+                    @include('shared.article_little')
                 @endforeach
             </div>
         </div>
