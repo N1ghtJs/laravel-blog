@@ -7,7 +7,7 @@
             <img class="z-avatar" src="/img/author/avatar.jpg" style="height:100px; width:100px;">
         </div>
 
-        <p>do something interesting</p>
+        <p>生活可以随心所欲，但不能随波逐流</p>
 
         {{--微信弹出框--}}
         <a href="" data-toggle="modal" data-target="#wechatModal">
