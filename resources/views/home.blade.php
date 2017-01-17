@@ -14,9 +14,7 @@
                 最新文章
             </div>
             <div class="z-panel-body">
-                @foreach ($articles_new as $article)
-                    @include('shared.article')
-                @endforeach
+                @each('shared.article', $articles_new, 'article')
             </div>
         </div>
     </div>

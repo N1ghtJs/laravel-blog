@@ -11,9 +11,7 @@
                 文章列表
             </div>
             <div class="z-panel-body">
-                @foreach ($articles as $article)
-                    @include('shared.article_little')
-                @endforeach
+                @each('shared.article_little', $articles, 'article')
             </div>
         </div>
 
