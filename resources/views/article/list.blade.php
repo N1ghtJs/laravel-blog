@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '首页')
+@section('title', '文章')
 
 @section('content')
 <div class="row">
