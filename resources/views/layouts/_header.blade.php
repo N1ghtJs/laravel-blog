@@ -18,8 +18,13 @@
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav" style="font-size: 18px;">
+            <ul class="nav navbar-nav" style="font-size: 15px;">
                 <li><a href="{{ route('article.list') }}">文章</a></li>
+                @if (Auth::check())
+                    @if (Auth::id() === 1)
+                        <li><a href="{{ route('admin') }}">管理后台</a></li>
+                    @endif
+                @endif
             </ul>
 
             <!-- Right Side Of Navbar -->

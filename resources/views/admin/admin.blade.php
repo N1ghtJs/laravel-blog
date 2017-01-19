@@ -24,10 +24,12 @@
 <body>
     {{--左侧垂直菜单栏--}}
     <div class="z-admin-menu">
-        <div class="header">管理后台</div>
+        <div class="header">
+            <a href="{{ route('admin') }}">管理后台</a>
+        </div>
         <ul CLASS="list">
 
-            <li><a href="{{ route('admin') }}"><span class="glyphicon glyphicon-cog"></span>面板</a></li>
+            <li><a href="{{ route('home') }}"><span class="glyphicon glyphicon-cog"></span>返回首页</a></li>
 
             <li><a href="#article-admin" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>文章管理</a></li>
             <ul id="article-admin" class="collapse">
