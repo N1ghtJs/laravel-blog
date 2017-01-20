@@ -11,7 +11,7 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ route('home') }}">
                 首页
             </a>
         </div>
@@ -20,6 +20,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav" style="font-size: 15px;">
                 <li><a href="{{ route('article.list') }}">文章</a></li>
+
                 @if (Auth::check())
                     @if (Auth::id() === 1)
                         <li><a href="{{ route('admin') }}">管理后台</a></li>

@@ -16,6 +16,9 @@
             <div class="z-panel-body">
                 @each('shared.article', $articles_new, 'article')
             </div>
+            <div class="z-panel-footer">
+                <a href="{{ route('article.list') }}">查看更多文章>></a>
+            </div>
         </div>
     </div>
 
