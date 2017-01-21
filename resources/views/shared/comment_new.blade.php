@@ -1,5 +1,5 @@
 <!-- 最新留言 -->
-<div class="z-panel">
+<!-- <div class="z-panel">
     <div class="z-panel-header">
         最新留言
     </div>
@@ -12,4 +12,4 @@
             <li>eee</li>
         </ul>
     </div>
-</div>
+</div> -->
