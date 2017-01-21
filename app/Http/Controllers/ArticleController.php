@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use GrahamCampbell\Markdown\Facades\Markdown;
-
 use App\Models\Article;
+
+use Markdown;//Markdown 解析器
 
 class ArticleController extends Controller
 {

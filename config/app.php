@@ -169,7 +169,7 @@ return [
         //markdown
         GrahamCampbell\Markdown\MarkdownServiceProvider::class,
         //图片处理
-
+        Intervention\Image\ImageServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -230,7 +230,7 @@ return [
         //markdown
         'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
         //图片处理
-
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];
