@@ -166,8 +166,9 @@ return [
         /*
          * Package Service Providers...
          */
-
+        //markdown
         GrahamCampbell\Markdown\MarkdownServiceProvider::class,
+        //图片处理
 
         /*
          * Application Service Providers...
@@ -226,7 +227,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        //markdown
         'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
+        //图片处理
+
     ],
 
 ];

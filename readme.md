@@ -5,12 +5,13 @@
 
 # 扩展包
 - caouecs/laravel-lang 中文语言包
-- graham-campbell/markdown Markdown 解析器
+- graham-campbell/markdown Markdown解析器
+- intervention/image 图片处理扩展（依赖：Imagick/GD）
 
 # 安装方法（稍后推出更详细的安装方法）
 - 安装 homestead 虚拟机
 - 克隆代码
-- 代码根目录执行 composer install
+- 代码根目录执行 composer install（如果有依赖安装依赖）
 
 # 更新日志
 
