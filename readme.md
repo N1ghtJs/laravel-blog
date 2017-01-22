@@ -13,7 +13,6 @@
 - 安装 homestead 虚拟机
 - 克隆代码
 - 代码根目录执行 composer install（如果有依赖安装依赖）
-- 需建立一个 storage 文件和 public 文件的符号链接（php artisan storage:link）
 
 # 更新日志
 
