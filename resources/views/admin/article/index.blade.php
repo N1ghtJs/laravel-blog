@@ -3,6 +3,7 @@
 @section('title', '文章列表')
 
 @section('content')
+<a href="{{ route('article.create') }}" class="btn btn-default"><span class="glyphicon glyphicon-plus"> 添加文章</span></a>
 <table class="z-table">
     <tr>
         <th>标题</th>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Storage;
+use Image;
 
 use App\Models\Article;
 
@@ -31,8 +32,13 @@ class ArticleController extends Controller
             'intro' => 'max:200',
         ]);
 
-        //封面图片存储并生成路径
-        $cover_path = Storage::url($request->cover->store('public/covers'));
+        //  BUG  封面图片存储并生成路径--> 读取不到？
+        //$cover_path = Storage::url($request->cover->store('public/covers'));
+        //Image::make($cover_path)->resize(350, 200)->save($cover_path);
+
+        //封面图片压缩存储并生成路径
+        $cover_path = "img/article/cover/" . time() . ".jpg";
+        Image::make($request->cover)->resize(355, 200)->save(public_path($cover_path));
 
         $article = Article::create([
             'title' => $request->title,
@@ -66,6 +72,16 @@ class ArticleController extends Controller
             'intro' => $request->intro,
             'content' => $request->content,
         ]);
+
+        //如果上传了封面图片则更新
+        if ($request->hasFile('cover')) {
+            //封面图片压缩存储并生成路径
+            $cover_path = "img/article/cover/" . time() . ".jpg";
+            Image::make($request->cover)->resize(355, 200)->save(public_path($cover_path));
+            $article->update([
+                'cover' => $cover_path,
+            ]);
+        }
 
         session()->flash('success', '编辑成功');
         return back();

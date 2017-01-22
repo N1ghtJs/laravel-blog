@@ -17,6 +17,7 @@
                 <input type="text" class="form-control" name="intro" placeholder="请填写简介" style="margin-bottom: 20px;">
                 <textarea name="content" rows="20" style="width:100%;"></textarea>
                 <div class="form-group">
+                    <label for="cover">上传封面图片</label>
                     <input type="file" name="cover">
                 </div>
                 <button type="submit" class="btn btn-default">完成</button>
