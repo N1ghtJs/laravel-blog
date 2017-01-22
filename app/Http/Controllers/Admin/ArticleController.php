@@ -38,7 +38,7 @@ class ArticleController extends Controller
 
         //封面图片压缩存储并生成路径
         $cover_path = "img/article/cover/" . time() . ".jpg";
-        Image::make($request->cover)->resize(355, 200)->save(public_path($cover_path));
+        Image::make($request->cover)->resize(355, 200)->save($cover_path);
 
         $article = Article::create([
             'title' => $request->title,
@@ -77,7 +77,7 @@ class ArticleController extends Controller
         if ($request->hasFile('cover')) {
             //封面图片压缩存储并生成路径
             $cover_path = "img/article/cover/" . time() . ".jpg";
-            Image::make($request->cover)->resize(355, 200)->save(public_path($cover_path));
+            Image::make($request->cover)->resize(355, 200)->save($cover_path);
             $article->update([
                 'cover' => $cover_path,
             ]);
