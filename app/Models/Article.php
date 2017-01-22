@@ -11,7 +11,7 @@ class Article extends Model
 
     //可写字段
     protected $fillable = [
-        'title', 'intro', 'content',
+        'title', 'intro', 'content', 'cover',
     ];
 
     //更新浏览量

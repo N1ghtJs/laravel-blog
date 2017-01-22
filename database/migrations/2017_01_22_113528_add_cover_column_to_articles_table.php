@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ChangeContentColumnTypeOfArticlesTable extends Migration
+class AddCoverColumnToArticlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class ChangeContentColumnTypeOfArticlesTable extends Migration
     public function up()
     {
         Schema::table('articles', function (Blueprint $table) {
-            $table->longText('content')->nullable()->change();
+            $table->string('cover')->nullable();
         });
     }
 
@@ -25,8 +25,8 @@ class ChangeContentColumnTypeOfArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::table('articles', function ($table) {
-            $table->string('content')->nullable()->change();
+        Schema::table('articles', function (Blueprint $table) {
+            $table->dropColumn('cover');
         });
     }
 }

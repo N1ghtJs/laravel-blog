@@ -11,15 +11,14 @@
             @include('shared.errors')
 
             {{--新增文章表单--}}
-            <form action="{{ route('article.store') }}" method="post">
+            <form action="{{ route('article.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <input type="text" class="form-control" name="title" placeholder="请填写标题" style="margin-bottom: 20px;">
                 <input type="text" class="form-control" name="intro" placeholder="请填写简介" style="margin-bottom: 20px;">
                 <textarea name="content" rows="20" style="width:100%;"></textarea>
-                <!-- <div class="form-group" style="margin-top: 20px;">
-                    <label for="picture">上传封面图片</label>
-                    <input type="file" id="picture" name="picture">
-                </div> -->
+                <div class="form-group">
+                    <input type="file" name="cover">
+                </div>
                 <button type="submit" class="btn btn-default">完成</button>
             </form>
 

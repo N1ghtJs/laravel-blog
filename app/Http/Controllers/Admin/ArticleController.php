@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Storage;
 
 use App\Models\Article;
 
@@ -30,10 +31,14 @@ class ArticleController extends Controller
             'intro' => 'max:200',
         ]);
 
+        //封面图片存储并生成路径
+        $cover_path = Storage::url($request->cover->store('public/covers'));
+
         $article = Article::create([
             'title' => $request->title,
             'intro' => $request->intro,
             'content' => $request->content,
+            'cover' => $cover_path,
         ]);
 
         session()->flash('success', '添加成功');
