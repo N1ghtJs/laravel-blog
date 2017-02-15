@@ -2,7 +2,7 @@
     <div class="col-md-12">
       <footer>
         <div class="about">
-            QQ:87826632
+            别拉了，到底了~
         </div>
       </footer>
     </div>
