@@ -10,6 +10,10 @@
 
     <title>@yield('title', '无标题') - lhz的个人主页</title>
 
+    <!-- icon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="bookmark" href="/img/favicon.ico" type="image/x-icon"　/>
+
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
