@@ -20,6 +20,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav" style="font-size: 15px;">
                 <li><a href="{{ route('article.list') }}">文章</a></li>
+                <li><a href="{{ route('messages.index') }}">留言板</a></li>
 
                 @if (Auth::check())
                     @if (Auth::id() === 1)

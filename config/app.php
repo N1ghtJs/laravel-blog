@@ -170,6 +170,8 @@ return [
         GrahamCampbell\Markdown\MarkdownServiceProvider::class,
         //图片处理
         Intervention\Image\ImageServiceProvider::class,
+        //视图合成器
+        App\Providers\ComposerServiceProvider::class,
         /*
          * Application Service Providers...
          */

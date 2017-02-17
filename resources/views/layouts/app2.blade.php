@@ -1,4 +1,4 @@
-{{-- 这是公共视图模板：包含了导航栏、巨幕、底部信息栏 --}}
+{{-- 这是两栏布局视图模板：包含了导航栏、巨幕、作者信息侧栏、底部信息栏 --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +31,23 @@
 
     <div class="container">
         @include('shared.messages')
-        @yield('content')
+        <div class="row">
+            <div class="col-md-9">
+                <!-- 文章信息 -->
+                @yield('content')
+            </div>
+
+            <div class="col-md-3">
+                <!-- 作者信息 -->
+                @include('shared.author_info')
+
+                <!-- 热门文章 -->
+                @include('shared.article_hot')
+
+                <!-- 最新留言 -->
+                @include('shared.comment_new')
+            </div>
+        </div>
         @include('layouts._footer')
     </div>
 

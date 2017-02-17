@@ -17,9 +17,7 @@ class HomeController extends Controller
     {
         //获取动态流-最新文章
         $articles_new = Article::new();
-        //获取动态流-热门文章
-        $articles_hot = Article::hot();
 
-        return view('home', compact('articles_new', 'articles_hot'));
+        return view('home', compact('articles_new'));
     }
 }

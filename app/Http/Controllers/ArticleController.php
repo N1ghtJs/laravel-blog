@@ -20,10 +20,7 @@ class ArticleController extends Controller
         //更新浏览量
         Article::update_view($id);
 
-        //获取动态流-热门文章
-        $articles_hot = Article::hot();
-
-        return view('article.show', compact('article', 'articles_hot'));
+        return view('article.show', compact('article'));
     }
 
     public function list()
@@ -31,10 +28,7 @@ class ArticleController extends Controller
         //获取全部文章
         $articles = Article::orderBy('created_at','desc')->paginate(20);
 
-        //获取动态流-热门文章
-        $articles_hot = Article::hot();
-
-        return view('article.list', compact('articles', 'articles_hot'));
+        return view('article.list', compact('articles'));
     }
 
     public function search(Request $request)
@@ -42,10 +36,7 @@ class ArticleController extends Controller
         //搜索文章
         $articles = Article::search($request->key);
 
-        //获取动态流-热门文章
-        $articles_hot = Article::hot();
-
         session()->flash('success', '搜索完成');
-        return view('article.list',compact('articles', 'articles_hot'));
+        return view('article.list',compact('articles'));
     }
 }
