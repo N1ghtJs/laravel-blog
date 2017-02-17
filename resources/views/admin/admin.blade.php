@@ -35,11 +35,7 @@
 
             <li><a href="{{ route('home') }}"><span class="glyphicon glyphicon-cog"></span>返回首页</a></li>
 
-            <li><a href="#article-admin" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>文章管理</a></li>
-            <ul id="article-admin" class="collapse">
-                <li><a href="{{ route('article.create') }}">新增文章</a></li>
-                <li><a href="{{ route('article.index') }}">文章列表</a></li>
-            </ul>
+            <li><a href="{{ route('article.index') }}"><span class="glyphicon glyphicon-cog"></span>文章管理</a></li>
 
 
             <li><a href="#collapse2" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>菜单3</a></li>
