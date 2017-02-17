@@ -28,7 +28,7 @@
                 <div class="form-group">
                     <textarea class="form-control" rows="3" name="content"></textarea>
                 </div>
-                <button type="submit" class="btn btn-default">匿名发表</button><a class="btn btn-default" href="{{ url('/login') }}">登录</a>
+                <button type="submit" class="btn btn-default">匿名发表</button><a class="btn btn-primary" style="margin-left:10px" href="{{ url('/login') }}">登录</a>
             @endif
         </form>
 
