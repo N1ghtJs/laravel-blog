@@ -54,6 +54,10 @@
 
 - 【标签】增加 favicon
 
+## 02-16
+
+- 【时间】友好格式时间更改为中文 Carbon 本地化 
+
 
 
 # Laravel PHP Framework
