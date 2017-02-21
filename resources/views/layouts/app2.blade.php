@@ -46,6 +46,9 @@
 
                 <!-- 最新留言 -->
                 @include('shared.comment_new')
+
+                <!-- 友情链接 -->
+                @include('shared.links')
             </div>
         </div>
         @include('layouts._footer')
