@@ -1,4 +1,5 @@
 <?php
+//此文件是 图片处理 配置文件
 
 return array(
 

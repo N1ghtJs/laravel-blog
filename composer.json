@@ -10,7 +10,8 @@
         "caouecs/laravel-lang": "~3.0",
         "doctrine/dbal": "^2.5",
         "graham-campbell/markdown": "^7.1",
-        "intervention/image": "^2.3"
+        "intervention/image": "^2.3",
+        "mews/captcha": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

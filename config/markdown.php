@@ -1,4 +1,5 @@
 <?php
+// 此文件是 Markdown 解析器配置文件
 
 /*
  * This file is part of Laravel Markdown.

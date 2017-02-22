@@ -172,6 +172,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         //视图合成器
         App\Providers\ComposerServiceProvider::class,
+        //图片验证码
+        Mews\Captcha\CaptchaServiceProvider::class,
         /*
          * Application Service Providers...
          */

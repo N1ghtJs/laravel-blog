@@ -68,5 +68,6 @@
 </nav>
 
 <div class="z-imax-img" style="margin-bottom: 20px;">
-    <img src="/img/header.jpg" alt="">
+    <img src="/img/header.jpg" class="hidden-xs">
+    <img src="/img/header-phone.jpg" class="visible-xs-block" style="width:100%;margin-top:50px">
 </div>

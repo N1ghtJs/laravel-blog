@@ -15,7 +15,7 @@
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">昵称</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
@@ -29,7 +29,7 @@
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">邮箱</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
@@ -43,7 +43,7 @@
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">密码</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <input id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -57,10 +57,29 @@
                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">确认密码</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
+                        <!-- 图片验证码 -->
+                        <!-- <div class="form-group">
+                            <label for="captcha" class="col-md-4 control-label">验证码</label>
+
+                            <div class="col-md-3">
+                                <input id="captcha" type="text" class="form-control" name="captcha" required>
+
+                                @if ($errors->has('captcha'))
+                                    <span class="help-block" style="color:#a94442;">
+                                        <strong>{{ $errors->first('captcha') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="col-md-3">
+                                <a href="">{!! captcha_img() !!}</a>
+                            </div>
+                        </div> -->
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

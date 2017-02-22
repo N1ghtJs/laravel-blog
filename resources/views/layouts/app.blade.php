@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', '无标题') - lhz的个人主页</title>
+    <title>@yield('title', '无标题') - lhz的博客</title>
 
     <!-- icon -->
     <link rel="shortcut icon" href="/img/favicon.ico" />

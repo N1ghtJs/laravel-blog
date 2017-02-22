@@ -86,6 +86,8 @@ return [
     'uploaded'             => ':attribute 上传失败。',
     'url'                  => ':attribute 格式不正确。',
 
+    'captcha'              => ':attribute 不正确。',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -144,6 +146,8 @@ return [
         'time'                  => '时间',
         'available'             => '可用的',
         'size'                  => '大小',
+
+        'captcha'               => '验证码',
     ],
 
 ];
