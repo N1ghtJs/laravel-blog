@@ -19,62 +19,88 @@
     @yield('styles')
 
     <!-- Scripts -->
-    <script>
-        window.Laravel = <?php echo json_encode([
-                'csrfToken' => csrf_token(),
-        ]); ?>
-    </script>
 </head>
 <body>
-    {{--左侧垂直菜单栏--}}
-    <div class="z-admin-menu">
-        <div class="header">
-            <a href="{{ route('admin') }}">管理后台</a>
-        </div>
-        <ul CLASS="list">
+    {{--电脑版 管理后台--}}
+    <div class="hidden-xs">
+        {{--左侧垂直菜单栏--}}
+        <div class="z-admin-menu">
+            <div class="header">
+                <a href="{{ route('admin') }}">管理后台</a>
+            </div>
+            <ul CLASS="list">
 
-            <li><a href="{{ route('home') }}"><span class="glyphicon glyphicon-cog"></span>返回首页</a></li>
+                <li><a href="{{ route('home') }}"><span class="glyphicon glyphicon-cog"></span>返回首页</a></li>
 
-            <li><a href="{{ route('article.index') }}"><span class="glyphicon glyphicon-cog"></span>文章管理</a></li>
+                <li><a href="{{ route('article.index') }}"><span class="glyphicon glyphicon-cog"></span>文章管理</a></li>
 
 
-            <li><a href="#collapse2" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>菜单3</a></li>
-            <ul id="collapse2" class="collapse">
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
-                <li><a href="">菜单31</a></li>
-                <li><a href="">菜单32</a></li>
-                <li><a href="">菜单33</a></li>
+                <!--
+                <li><a href="#collapse2" data-toggle="collapse"><span class="glyphicon glyphicon-cog"></span>菜单3</a></li>
+                <ul id="collapse2" class="collapse">
+                    <li><a href="">菜单31</a></li>
+                    <li><a href="">菜单32</a></li>
+                    <li><a href="">菜单33</a></li>
+                    <li><a href="">菜单31</a></li>
+                    <li><a href="">菜单32</a></li>
+                    <li><a href="">菜单33</a></li>
+                    <li><a href="">菜单31</a></li>
+                    <li><a href="">菜单32</a></li>
+                    <li><a href="">菜单33</a></li>
+                    <li><a href="">菜单31</a></li>
+                    <li><a href="">菜单32</a></li>
+                    <li><a href="">菜单33</a></li>
+                    <li><a href="">菜单31</a></li>
+                    <li><a href="">菜单32</a></li>
+                    <li><a href="">菜单33</a></li>
+                    <li><a href="">菜单31</a></li>
+                    <li><a href="">菜单32</a></li>
+                    <li><a href="">菜单33</a></li>
+                    <li><a href="">菜单31</a></li>
+                    <li><a href="">菜单32</a></li>
+                    <li><a href="">菜单33</a></li>
+                </ul>
+                -->
+
             </ul>
-        </ul>
-    </div>
-    {{--右侧内容区--}}
-    <div class="z-admin-box">
-        <div class="header">
+        </div>
+        {{--右侧内容区--}}
+        <div class="z-admin-box">
+            <div class="header">
+
+            </div>
+            <div class="content">
+                @include('shared.messages')
+                @yield('content')
+            </div>
 
         </div>
-        <div class="content">
-            @include('shared.messages')
-            @yield('content')
-        </div>
-
     </div>
+
+    {{--手机版 管理后台--}}
+    <div class="visible-xs-block">
+        {{--左侧垂直菜单栏--}}
+        <div class="z-admin-menu-phone">
+            <div class="header">
+                <a href="{{ route('admin') }}"><span class="glyphicon glyphicon-cog"></span></a>
+            </div>
+            <ul>
+
+                <li><a href="{{ route('home') }}">首页</a></li>
+
+                <li><a href="{{ route('article.index') }}">文章</a></li>
+
+            </ul>
+        </div>
+        {{--右侧内容区--}}
+        <div class="z-admin-box-phone">
+            <div class="content">
+                @include('shared.messages')
+                @yield('content')
+            </div>
+        </div>
+    </div>
+
 </body>
 <!-- Scripts -->
 <script src="/js/app.js"></script>
