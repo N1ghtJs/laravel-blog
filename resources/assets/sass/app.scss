@@ -85,6 +85,13 @@ footer {
         text-overflow:ellipsis;
       }
     }
+    .markdown{
+        img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
   }
   .z-panel-footer{
       background-color: #F8F8F8;

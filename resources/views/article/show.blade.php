@@ -12,7 +12,9 @@
         <span>时间: {{ $article->created_at }}</span>
     </div>
     <div class="z-panel-body" style="padding:20px;">
-        {!! $article->content !!}
+        <div class="markdown">
+            {!! $article->content !!}
+        </div>
     </div>
 </div>
 @endsection
