@@ -18,11 +18,27 @@
                 <!-- 编辑按钮 -->
                 <a href="{{ route('article.edit', $article->id) }}" style="display: inline-block;"><span class="glyphicon glyphicon-edit"></span></a>
                 <!-- 删除按钮 -->
-                <form action="{{ route('article.destroy', $article->id) }}" method="post" style="display: inline-block;">
-                    {{ csrf_field() }}
-                    {{ method_field('DELETE') }}
-                    <button type="submit" style="color: #F08080;background-color: transparent;border: none;"><span class="glyphicon glyphicon-minus-sign"></span></button>
-                </form>
+                <button type="submit" style="color: #F08080;background-color: transparent;border: none;" data-toggle="modal" data-target="#deleteArticle"><span class="glyphicon glyphicon-minus-sign"></span></button>
+                <!-- 删除按钮：弹出框 -->
+                <div class="modal fade" id="deleteArticle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content" style="text-align:center">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">确认删除该文章吗？</h4>
+                      </div>
+                      <div class="modal-body">
+                          <form action="{{ route('article.destroy', $article->id) }}" method="post" style="display: inline-block;">
+                              {{ csrf_field() }}
+                              {{ method_field('DELETE') }}
+                              <button type="submit" class="btn btn-danger">删除</button>
+                          </form>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
             </td>
         </tr>
     @endforeach
