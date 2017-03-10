@@ -18,6 +18,7 @@
         </ul>
     </div>
     <div class="z-panel-footer">
+        <a href="{{ route('messages.index') }}#message-form" style="margin-right:10px">我要留言</a>
         <a href="{{ route('messages.index') }}">查看更多留言>></a>
     </div>
 </div>
