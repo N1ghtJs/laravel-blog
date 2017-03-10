@@ -45,4 +45,5 @@
         <a href="#comment-form">我要评论</a>
     </div>
 </div>
+{{ $comments->render() }}
 @endsection
