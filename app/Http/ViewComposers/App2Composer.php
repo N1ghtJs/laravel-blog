@@ -5,6 +5,7 @@ namespace App\Http\ViewComposers;
 use Illuminate\View\View;
 
 use App\Models\Article;
+use App\Models\Message;
 
 class App2Composer
 {
@@ -19,6 +20,15 @@ class App2Composer
         //获取动态流-热门文章
         $articles_hot = Article::hot();
 
+        //获取动态流-最新留言
+        $messages_new = Message::new();
+
+
         $view->with('articles_hot', $articles_hot);
+        $view->with(
+        [
+            'articles_hot' => $articles_hot,
+            'messages_new' => $messages_new,
+        ]);
     }
 }
