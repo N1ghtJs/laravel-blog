@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Message;
 
+use Auth;
+
 class MessagesController extends Controller
 {
     public function index()
@@ -22,8 +24,15 @@ class MessagesController extends Controller
             'content' => 'required',
         ]);
 
+        //获取 user_id 未登录用户为 0
+        if (Auth::check()) {
+            $user_id = Auth::id();
+        }else{
+            $user_id = 0;
+        }
+
         $message = Message::create([
-            'user_id' => $request->user_id,
+            'user_id' => $user_id,
             'content' => $request->content,
         ]);
 

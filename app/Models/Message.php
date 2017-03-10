@@ -12,7 +12,7 @@ class Message extends Model
 
     //可写字段
     protected $fillable = [
-        'user_id', 'content',
+        'user_id','content',
     ];
 
     //模型关联：获取该留言所属的用户模型

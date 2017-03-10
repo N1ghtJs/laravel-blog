@@ -17,17 +17,12 @@
         <h5 id="message-form" style="padding-top:30px;">发表您的留言</h5>
         <form action="{{ route('messages.store') }}" method="post" >
             {{ csrf_field() }}
-            @if(Auth::check())
-                <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-                <div class="form-group">
-                    <textarea class="form-control" rows="3" name="content"></textarea>
-                </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="3" name="content"></textarea>
+            </div>
+            @if(Auth::check())    
                 <button type="submit" class="btn btn-default">发表</button>
             @else
-                <input type="hidden" name="user_id" value="0">
-                <div class="form-group">
-                    <textarea class="form-control" rows="3" name="content"></textarea>
-                </div>
                 <button type="submit" class="btn btn-default">匿名发表</button><a class="btn btn-primary" style="margin-left:10px" href="{{ url('/login') }}">登录</a>
             @endif
         </form>
