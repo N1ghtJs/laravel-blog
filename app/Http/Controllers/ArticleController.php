@@ -20,7 +20,11 @@ class ArticleController extends Controller
         //更新浏览量
         Article::update_view($id);
 
-        return view('article.show', compact('article'));
+        //获取评论
+        $comments = $article->comments()->orderBy('created_at','desc')->paginate(10);
+
+
+        return view('article.show', compact(['article','comments']));
     }
 
     public function list()

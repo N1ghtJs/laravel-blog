@@ -1,4 +1,5 @@
 <?php
+// 用户表模型文件
 
 namespace App\Models;
 

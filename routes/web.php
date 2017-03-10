@@ -26,6 +26,9 @@ Route::get('/article/search', 'ArticleController@search')->name('article.search'
 //文章资源路由
 Route::resource('article', 'ArticleController', ['only' => 'show']);
 
+//评论资源路由
+Route::resource('/comments', 'CommentsController', ['only' => ['store']]);
+
 //留言资源路由
 Route::resource('/messages', 'MessagesController', ['only' => ['index','store']]);
 

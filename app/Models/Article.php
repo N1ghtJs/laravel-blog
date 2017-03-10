@@ -1,4 +1,5 @@
 <?php
+// 文章表模型文件
 
 namespace App\Models;
 
@@ -45,5 +46,11 @@ class Article extends Model
         $articles = Article::orderBy('view','desc')->take(5)->get();
 
         return $articles;
+    }
+
+    //模型关联： 获取文章下的所有评论
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
     }
 }

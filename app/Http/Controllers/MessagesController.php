@@ -23,7 +23,7 @@ class MessagesController extends Controller
         ]);
 
         $message = Message::create([
-            'name' => $request->name,
+            'user_id' => $request->user_id,
             'content' => $request->content,
         ]);
 

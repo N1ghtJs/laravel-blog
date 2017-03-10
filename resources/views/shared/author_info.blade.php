@@ -1,4 +1,4 @@
-<div class="z-panel">
+<div class="z-panel" id="author_info">
     <div class="z-panel-header">
         SadCreeper
     </div>

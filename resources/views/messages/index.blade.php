@@ -18,13 +18,13 @@
         <form action="{{ route('messages.store') }}" method="post" >
             {{ csrf_field() }}
             @if(Auth::check())
-                <input type="hidden" name="name" value="{{ Auth::user()->name }}">
+                <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                 <div class="form-group">
                     <textarea class="form-control" rows="3" name="content"></textarea>
                 </div>
                 <button type="submit" class="btn btn-default">发表</button>
             @else
-                <input type="hidden" name="name" value="一个未知的用户">
+                <input type="hidden" name="user_id" value="0">
                 <div class="form-group">
                     <textarea class="form-control" rows="3" name="content"></textarea>
                 </div>

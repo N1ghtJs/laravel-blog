@@ -5,7 +5,8 @@
     </div>
     <div class="z-panel-body">
         <ul>
-            <li><a href="http://people.tamu.edu/~haoranwang" target="_blank">awcv9kjlh scwrlkjf4e|Haoran Wang</a></li>
+            <li><a href="http://www.wesharediy.com" target="_blank">WeShare为啥：有偿知识分享平台</a></li>
+            <li><a href="#author_info">想在此添加友链？联系我</a></li>
         </ul>
     </div>
 </div>

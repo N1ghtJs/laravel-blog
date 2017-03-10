@@ -39,10 +39,13 @@
                 @include('shared.article_hot')
 
                 <!-- 最新留言 -->
-                @include('shared.comment_new')
+                @include('shared.message_new')
 
                 <!-- 友情链接 -->
                 @include('shared.links')
+
+                <!-- 广告位 -->
+                @include('shared.ads')
             </div>
         </div>
         @include('layouts._footer')
