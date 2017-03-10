@@ -25,6 +25,16 @@ class Article extends Model
         ]);
     }
 
+    //更新评论量
+    static public function update_comment($id)
+    {
+        $article = Article::findOrFail($id);
+        $article->comment = $article->comment + 1;
+        $article->update([
+            'comment' => $article->comment,
+        ]);
+    }
+
     //搜索文章
     static public function search($key)
     {

@@ -7,9 +7,9 @@
 <div class="z-panel">
     <div class="z-panel-header">
         <h3>{{ $article->title }}</h3>
-        <span>浏览：{{ $article->view }}</span>
-        <span>评论：{{ $article->comment }}</span>
-        <span>时间: {{ $article->created_at }}</span>
+        <span class="glyphicon glyphicon-eye-open"></span><span style="margin-right:10px"> {{ $article->view }}</span>
+        <span class="glyphicon glyphicon-edit"></span><span style="margin-right:10px"> {{ $article->comment }}</span>
+        <span class="glyphicon glyphicon-time"></span><span> {{ $article->created_at }}</span>
     </div>
     <div class="z-panel-body" style="padding:20px;">
         <!-- 文章内容显示 markdown -->
