@@ -7,13 +7,20 @@
 
 require('./bootstrap');
 
+//给 AJAX 全局加入 csrf-token
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the body of the page. From here, you may begin adding components to
  * the application, or feel free to tweak this setup for your needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+//Vue.component('reply', require('./components/Reply.vue'));
 
 const app = new Vue({
     el: '#app'

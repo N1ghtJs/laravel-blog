@@ -29,6 +29,9 @@ Route::resource('article', 'ArticleController', ['only' => 'show']);
 //评论资源路由
 Route::resource('/comments', 'CommentsController', ['only' => ['store']]);
 
+//评论资源路由
+Route::resource('/replys', 'ReplysController', ['only' => ['store']]);
+
 //留言资源路由
 Route::resource('/messages', 'MessagesController', ['only' => ['index','store']]);
 

@@ -17,12 +17,13 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    @yield('styles')
 </head>
 <body>
 
     @include('layouts._header')
 
-    <div class="container">
+    <div class="container" id="app"> <!-- id = app : 开启 Vue.js-->
         @include('shared.messages')
         @yield('content')
         @include('layouts._footer')
@@ -30,5 +31,6 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    @yield('script')
 </body>
 </html>

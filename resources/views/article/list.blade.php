@@ -2,7 +2,7 @@
 
 @section('title', '文章')
 
-@section('content')
+@section('content-left')
 <!-- 文章列表 -->
 <div class="z-panel">
     <div class="z-panel-header" style="text-align: left;">

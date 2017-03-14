@@ -2,7 +2,22 @@
 
 @section('title', "$article->title")
 
-@section('content')
+@section('styles')
+<style media="screen">
+    .replyList{
+        max-height:300px;
+        overflow-y:auto;
+    }
+    .replyList::-webkit-scrollbar {
+      width: 8px;
+    }
+    .replyList::-webkit-scrollbar-thumb {
+      background-color: #e2e1e1;
+    }
+</style>
+@endsection
+
+@section('content-left')
 <!-- 文章信息 -->
 <div class="z-panel">
     <div class="z-panel-header">
@@ -30,12 +45,10 @@
                 </div>
                 <button type="submit" class="btn btn-default">发表</button>
             @else
-                <input type="hidden" name="article_id" value="{{ $article->id }}">
-                <input type="hidden" name="user_id" value="0">
                 <div class="form-group">
                     <textarea class="form-control" rows="3" name="content"></textarea>
                 </div>
-                <button type="submit" class="btn btn-default">匿名发表</button><a class="btn btn-primary" style="margin-left:10px" href="{{ url('/login') }}">登录</a>
+                <a class="btn btn-primary" href="{{ url('/login') }}">登录后发表</a>
             @endif
         </form>
 
@@ -46,4 +59,44 @@
     </div>
 </div>
 {{ $comments->render() }}
+@endsection
+
+@section('script')
+<script>
+$(document).ready(function(){
+    //显示回复框函数
+    $('a#replyButton').click(function(){
+        //获取点击的 comment id
+        var comment_id = $(this).attr('data-comment-id');
+
+        //显示相应的回复表单
+        $('#replyForm' + comment_id).show();
+    });
+    //AJAX 回复
+    $('a#replyAJAX').click(function(){
+        //获取点击的 comment id
+        var comment_id = $(this).attr('data-comment-id');
+
+        //获取表单值
+        var form_data = $('#replyForm' + comment_id).serialize();
+
+        //AJAX 存储
+        $.ajax({
+            url: "{{ route('replys.store') }}",
+            type: "post",
+            data: form_data,
+            success: function(res){
+                console.log(res);
+            },
+            error: function(err){
+                console.log(err.responseText);
+            }
+        });
+
+        //刷新页面
+        location.reload();
+    });
+
+});
+</script>
 @endsection

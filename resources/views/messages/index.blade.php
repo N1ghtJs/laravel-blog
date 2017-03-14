@@ -2,7 +2,7 @@
 
 @section('title', "留言板")
 
-@section('content')
+@section('content-left')
 
 <!-- 最新文章 -->
 <div class="z-panel">
@@ -20,7 +20,7 @@
             <div class="form-group">
                 <textarea class="form-control" rows="3" name="content"></textarea>
             </div>
-            @if(Auth::check())    
+            @if(Auth::check())
                 <button type="submit" class="btn btn-default">发表</button>
             @else
                 <button type="submit" class="btn btn-default">匿名发表</button><a class="btn btn-primary" style="margin-left:10px" href="{{ url('/login') }}">登录</a>

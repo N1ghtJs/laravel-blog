@@ -2,7 +2,7 @@
 
 @section('title', '首页')
 
-@section('content')
+@section('content-left')
 <!-- 轮播 -->
 @include('shared.slides')
 

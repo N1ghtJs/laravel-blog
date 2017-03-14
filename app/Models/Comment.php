@@ -20,4 +20,10 @@ class Comment extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
+    //模型关联：获取该评论的所有回复
+    public function replys()
+    {
+        return $this->hasMany('App\Models\Reply');
+    }
 }

@@ -9,6 +9,7 @@ use App\Models\Article;
 
 class CommentsController extends Controller
 {
+    //存储评论
     public function store(Request $request)
     {
         $this->validate($request, [
