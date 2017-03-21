@@ -10,6 +10,7 @@ use Markdown;//Markdown 解析器
 
 class ArticleController extends Controller
 {
+    //文章详情页
     public function show($id)
     {
         $article = Article::findOrFail($id);
@@ -27,6 +28,7 @@ class ArticleController extends Controller
         return view('article.show', compact(['article','comments']));
     }
 
+    //文章列表页
     public function list()
     {
         //获取全部文章
@@ -35,6 +37,7 @@ class ArticleController extends Controller
         return view('article.list', compact('articles'));
     }
 
+    //文章搜索页
     public function search(Request $request)
     {
         //搜索文章
@@ -42,5 +45,11 @@ class ArticleController extends Controller
 
         session()->flash('success', '搜索完成');
         return view('article.list',compact('articles'));
+    }
+
+    //markdown AJAX 解析
+    public function markdown(Request $request)
+    {
+        return Markdown::convertToHtml($request->content);
     }
 }

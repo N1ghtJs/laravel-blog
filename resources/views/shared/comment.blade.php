@@ -19,7 +19,7 @@
                     <p style="color:gray;font-size:13px"> {{ $reply->created_at }}</p>
                 @endforeach
                 <a href="javascript:;" id="replyButton" data-comment-id="{{ $comment->id }}">我也说一句..</a>
-            </div>
+                </div>
             @endif
         </div>
         <!-- AJAX 表单 -->
