@@ -26,10 +26,10 @@
                   <!-- Tab panes -->
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="editTab">
-                        <textarea class="z-textarea" style="border: 1px solid #ccd0d2;border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);width:100%;" name="content" rows="20" style="width:100%;"></textarea>
+                        <textarea class="z-textarea" name="content" rows="20" style="width:100%;"></textarea>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="previewTab">
-                        <div class="z-textarea-preview markdown" style="padding:10px;min-height:100px;background-color:#fff;border: 1px solid #ccd0d2;border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);">
+                        <div class="z-textarea-preview markdown">
                             预览
                         </div>
                     </div>
