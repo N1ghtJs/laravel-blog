@@ -20,7 +20,7 @@
 
     <!-- Scripts -->
 </head>
-<body>
+<body >
         {{--左侧垂直菜单栏--}}
         <div class="z-admin-menu">
             <div class="header">

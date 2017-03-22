@@ -2,6 +2,21 @@
 
 @section('title', '新建文章')
 
+@section('styles')
+    <style media="screen">
+        .markdown{
+
+        }
+        .markdown h1{
+            padding-bottom: 0.3em;
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            line-height: 1.25;
+
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="container-fluid">
     <div class="row">

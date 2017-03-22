@@ -2,6 +2,12 @@
 
 @section('title', '编辑文章')
 
+@section('styles')
+    <style media="screen">
+        
+    </style>
+@endsection
+
 @section('content')
 <div class="container-fluid">
     <div class="row">
@@ -30,8 +36,9 @@
                         <textarea class="z-textarea" name="content" rows="20" style="width:100%;">{{ $article->content }}</textarea>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="previewTab">
+                        <?prettify?>
                         <div class="z-textarea-preview markdown">
-                            预览
+                            <!-- 预览内容 -->
                         </div>
                     </div>
                   </div>
@@ -49,6 +56,7 @@
 @endsection
 
 @section('scripts')
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?autorun=true"></script>
 <script type="text/javascript">
 //标签页JS
 $('#myTabs a').click(function (e) {
