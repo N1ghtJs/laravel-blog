@@ -185,145 +185,150 @@ footer {
 //------------------     管理后台 电脑版
 //----------------------------------------------------------
 //左侧垂直菜单栏
-.z-admin-menu{
-  position: absolute;
-  left: 0;top: 0;bottom: 0;
-  width: 300px;
-  background-color: #2C2D2E;
-  overflow: auto;
-  .header{
-    color: #ADADAD;
-    padding:20px 0 20px 50px;
-    border-bottom: 1px solid #3C3D3E;
-  }
-  .list{
-    padding: 10px 30px 0 30px;
-  }
-  ul{
-    padding: 0;
-  }
-  li{
-    list-style: none;
-    border-bottom: 1px solid #3C3D3E;
-    padding: 10px 0 10px;
-  }
-  a{
-    text-decoration:none;
-    position: relative;
-    padding-left: 30px;
-    color: #666666;
-  }
-  a:hover{
-    color: white;
-  }
-  span{
-    position: absolute;
-    left: 0;
-  }
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: #2C2D2E;
-  }
-  &::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #555;
-  }
+@media (min-width: 768px) {
+    .z-admin-menu{
+      position: absolute;
+      left: 0;top: 0;bottom: 0;
+      width: 300px;
+      background-color: #2C2D2E;
+      overflow: auto;
+      .header{
+        color: #ADADAD;
+        padding:20px 0 20px 50px;
+        border-bottom: 1px solid #3C3D3E;
+      }
+      .list{
+        padding: 10px 30px 0 30px;
+      }
+      ul{
+        padding: 0;
+      }
+      li{
+        list-style: none;
+        border-bottom: 1px solid #3C3D3E;
+        padding: 10px 0 10px;
+      }
+      a{
+        text-decoration:none;
+        position: relative;
+        padding-left: 30px;
+        color: #666666;
+      }
+      a:hover{
+        color: white;
+      }
+      span{
+        position: absolute;
+        left: 0;
+      }
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #2C2D2E;
+      }
+      &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+      }
+    }
+    //右侧内容区
+    .z-admin-box{
+      margin-left: 300px;
+      height: 100vh;
+      background-color: #EEEEEE;
+      overflow: auto;
+      .header{
+        display: flex;
+        align-items: center;
+        height: 63px;
+        width: 100%;
+        background-color: white;
+      }
+      .content{
+        padding: 20px;
+      }
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+      }
+    }
 }
-//右侧内容区
-.z-admin-box{
-  margin-left: 300px;
-  height: 100vh;
-  background-color: #EEEEEE;
-  overflow: auto;
-  .header{
-    display: flex;
-    align-items: center;
-    height: 63px;
-    width: 100%;
-    background-color: white;
-  }
-  .content{
-    padding: 20px;
-  }
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-  &::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #555;
-  }
-}
+
 
 //----------------------------------------------------------
 //------------------     管理后台 手机版
 //----------------------------------------------------------
-//左侧垂直菜单栏
-.z-admin-menu-phone{
-  position: absolute;
-  left: 0;top: 0;bottom: 0;
-  width: 50px;
-  background-color: #2C2D2E;
-  overflow: auto;
-  .header{
-    font-size:20px;
-    padding:5px 0 0 8px;
-    color: #ADADAD;
-    border-bottom: 1px solid #3C3D3E;
-  }
-  ul{
-      padding: 0;
-  }
-  li{
-    list-style: none;
-    font-size: 18px;
-    border-bottom: 1px solid #3C3D3E;
-    padding: 10px 0 10px;
-  }
-  a{
-    text-decoration:none;
-    position: relative;
-    padding-left: 5px;
-    color: #666666;
-  }
-  a:hover{
-    color: white;
-  }
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: #2C2D2E;
-  }
-  &::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #555;
-  }
-}
-//右侧内容区
-.z-admin-box-phone{
-  margin-left: 50px;
-  height: 100vh;
-  background-color: #EEEEEE;
-  overflow: auto;
-  .header{
-    display: flex;
-    align-items: center;
-    height: 63px;
-    width: 100%;
-    background-color: white;
-  }
-  .content{
-    padding: 20px;
-  }
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-  &::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #555;
-  }
+@media (max-width: 768px) {
+    //左侧垂直菜单栏
+    .z-admin-menu{
+      position: absolute;
+      left: 0;top: 0;bottom: 0;
+      width: 50px;
+      background-color: #2C2D2E;
+      overflow: auto;
+      .header{
+        font-size:20px;
+        padding:5px 0 0 8px;
+        color: #ADADAD;
+        border-bottom: 1px solid #3C3D3E;
+      }
+      ul{
+          padding: 0;
+      }
+      li{
+        list-style: none;
+        font-size: 18px;
+        border-bottom: 1px solid #3C3D3E;
+        padding: 10px 0 10px;
+      }
+      a{
+        text-decoration:none;
+        position: relative;
+        padding-left: 5px;
+        color: #666666;
+      }
+      a:hover{
+        color: white;
+      }
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #2C2D2E;
+      }
+      &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+      }
+    }
+    //右侧内容区
+    .z-admin-box{
+      margin-left: 50px;
+      height: 100vh;
+      background-color: #EEEEEE;
+      overflow: auto;
+      .header{
+        display: flex;
+        align-items: center;
+        height: 63px;
+        width: 100%;
+        background-color: white;
+      }
+      .content{
+        padding: 20px;
+      }
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+      }
+    }
 }
 
 //----------------------------------------------------------
