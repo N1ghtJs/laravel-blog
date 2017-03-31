@@ -3,10 +3,10 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="/img/slide/1.jpg" alt="imax1">
+            <a href="{{ route('article.show', 3) }}"><img src="/img/slide/1.jpg" alt="imax1"></a>
         </div>
         <div class="item">
-            <img src="/img/slide/2.jpg" alt="imax2">
+            <a href="#"><img src="/img/slide/2.jpg" alt="imax2"></a>
         </div>
     </div>
 
