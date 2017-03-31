@@ -384,6 +384,9 @@ footer {
         height: auto;
         display: block;
     }
+    p{
+        word-break:break-all;//连续长数字/长字符超出强制换行
+    }
     h1{
         padding-bottom: 0.3em;
         font-size: 2em;
