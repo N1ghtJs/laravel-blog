@@ -12,7 +12,7 @@ class Article extends Model
 
     //可写字段
     protected $fillable = [
-        'title', 'intro', 'content', 'cover',
+        'title', 'intro', 'content', 'cover','hidden',
     ];
 
     //更新浏览量
@@ -38,14 +38,14 @@ class Article extends Model
     //搜索文章
     static public function search($key)
     {
-        $article = Article::where('title', 'like', '%'.$key.'%')->paginate(20);
+        $article = Article::where('title', 'like', '%'.$key.'%')->where('hidden', false)->paginate(20);
         return $article;
     }
 
     //动态流-最新文章
     static public function new()
     {
-        $articles = Article::orderBy('created_at','desc')->take(5)->get();
+        $articles = Article::where('hidden', false)->orderBy('created_at','desc')->take(5)->get();
 
         return $articles;
     }
@@ -53,7 +53,7 @@ class Article extends Model
     //动态流-热门文章
     static public function hot()
     {
-        $articles = Article::orderBy('view','desc')->take(5)->get();
+        $articles = Article::where('hidden', false)->orderBy('view','desc')->take(5)->get();
 
         return $articles;
     }

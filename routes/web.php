@@ -43,6 +43,9 @@ Route::group(['middleware' => ['auth'],'namespace' => 'Admin','prefix' => 'admin
     //首页
     Route::get('/','AdminController@index')->name('admin');
 
+    //文章隐藏
+    Route::get('/article/hidden/{id}', 'ArticleController@hidden')->name('article.hidden');
+
     //文章资源路由
     Route::resource('article','ArticleController', ['except' => 'show']);
 });

@@ -99,4 +99,22 @@ class ArticleController extends Controller
         session()->flash('success', '删除成功');
         return back();
     }
+
+    //文章->隐藏/显示
+    public function hidden($id)
+    {
+        $article = Article::findOrFail($id);
+
+        $article->update([
+            'hidden' => !$article->hidden,
+        ]);
+
+        if ($article->hidden == 1) {
+            session()->flash('success', '文章已隐藏');
+        }else{
+            session()->flash('success', '文章已解除隐藏');
+        }
+
+        return back();
+    }
 }

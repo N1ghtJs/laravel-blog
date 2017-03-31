@@ -32,7 +32,7 @@ class ArticleController extends Controller
     public function list()
     {
         //获取全部文章
-        $articles = Article::orderBy('created_at','desc')->paginate(20);
+        $articles = Article::where('hidden', false)->orderBy('created_at','desc')->paginate(20);
 
         return view('article.list', compact('articles'));
     }
