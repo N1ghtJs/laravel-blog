@@ -36,9 +36,13 @@ class ArticleController extends Controller
         //$cover_path = Storage::url($request->cover->store('public/covers'));
         //Image::make($cover_path)->resize(350, 200)->save($cover_path);
 
-        //封面图片压缩存储并生成路径
-        $cover_path = "img/article/cover/" . time() . ".jpg";
-        Image::make($request->cover)->resize(355, 200)->save(public_path($cover_path));
+        if ($request->hasFile('cover')) {
+            //封面图片压缩存储并生成路径
+            $cover_path = "img/article/cover/" . time() . ".jpg";
+            Image::make($request->cover)->resize(355, 200)->save(public_path($cover_path));
+        }else{
+            $cover_path = "img/default_cover.jpg";
+        }
 
         $article = Article::create([
             'title' => $request->title,
