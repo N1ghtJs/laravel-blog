@@ -27,7 +27,7 @@ Route::get('/article/search', 'ArticleController@search')->name('article.search'
 Route::resource('article', 'ArticleController', ['only' => 'show']);
 
 //markdown AJAX 解析
-Route::get('/markdown', 'ArticleController@markdown')->name('markdown');
+Route::post('/markdown', 'ArticleController@markdown')->name('markdown');
 
 //评论资源路由
 Route::resource('/comments', 'CommentsController', ['only' => ['store']]);

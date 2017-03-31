@@ -2,12 +2,6 @@
 
 @section('title', '编辑文章')
 
-@section('styles')
-    <style media="screen">
-        
-    </style>
-@endsection
-
 @section('content')
 <div class="container-fluid">
     <div class="row">
@@ -71,7 +65,7 @@ $('#previewButton').click(function (){
     //AJAX 解析
     $.ajax({
         url: "{{ route('markdown') }}",
-        type: "get",
+        type: "post",
         data: {
             content:$('.z-textarea').val()
         },

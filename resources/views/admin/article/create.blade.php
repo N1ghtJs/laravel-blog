@@ -2,21 +2,6 @@
 
 @section('title', '新建文章')
 
-@section('styles')
-    <style media="screen">
-        .markdown{
-
-        }
-        .markdown h1{
-            padding-bottom: 0.3em;
-            font-size: 2em;
-            border-bottom: 1px solid #eaecef;
-            line-height: 1.25;
-
-        }
-    </style>
-@endsection
-
 @section('content')
 <div class="container-fluid">
     <div class="row">
@@ -30,6 +15,7 @@
                 {{ csrf_field() }}
                 <input type="text" class="form-control" name="title" placeholder="请填写标题" style="margin-bottom: 20px;">
                 <input type="text" class="form-control" name="intro" placeholder="请填写简介" style="margin-bottom: 20px;">
+
                 <!-- 编辑框 -->
                 <div>
                   <!-- Nav tabs -->
@@ -78,7 +64,7 @@ $('#previewButton').click(function (){
     //AJAX 解析
     $.ajax({
         url: "{{ route('markdown') }}",
-        type: "get",
+        type: "post",
         data: {
             content:$('.z-textarea').val()
         },
