@@ -25,8 +25,8 @@ class ChangeContentColumnTypeOfArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::table('articles', function ($table) {
-            $table->string('content')->nullable()->change();
+        Schema::table('articles', function (Blueprint $table) {
+            //$table->string('content')->nullable()->change();
         });
     }
 }

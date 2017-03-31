@@ -174,6 +174,8 @@ return [
         App\Providers\ComposerServiceProvider::class,
         //图片验证码
         Mews\Captcha\CaptchaServiceProvider::class,
+        //Debugbar
+        Barryvdh\Debugbar\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -235,6 +237,8 @@ return [
         'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
         //图片处理
         'Image' => Intervention\Image\Facades\Image::class,
+        //Debugbar
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];
