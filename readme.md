@@ -1,7 +1,7 @@
 # Laravel-blog
 基于 Laravel 5.3 的个人博客系统
 
-演示地址：http://sadcreeper.xyz
+演示地址：http://www.sadcreeper.xyz
 
 如果你喜欢这个开源项目，记得在右上角点个 star 哦，谢谢：）
 
