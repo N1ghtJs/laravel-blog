@@ -1,25 +1,66 @@
-# Myweb 3
-基于 Laravel 5.3 的最新版个人技术博客
+# Laravel-blog
+基于 Laravel 5.3 的个人博客系统
 
-[线上地址](http://59.110.137.214/)
+演示地址：http://sadcreeper.xyz
 
-# 扩展包
-- caouecs/laravel-lang 中文语言包
-- doctrine/dbal 数据库迁移支持包
-- graham-campbell/markdown Markdown解析器
-- intervention/image 图片处理扩展（依赖：Imagick/GD）
+如果你喜欢这个开源项目，记得在右上角点个 star 哦，谢谢：）
 
-# 安装方法（稍后推出更详细的安装方法）
-- 安装 homestead 虚拟机
-- 克隆代码
-- 代码根目录执行 composer install（如果有依赖安装依赖）
+# 安装方法（开发环境）
+
+## 安装 homestead 虚拟机
+
+[Homestead 安装与配置文档](http://d.laravel-china.org/docs/5.3/homestead)
+
+## 进入 homestead 虚拟机
+
+```
+cd ~/Homestead
+
+vagrant up
+
+vagrant ssh
+
+cd Code
+```
+
+
+## 获取代码
+
+```
+git clone https://github.com/SadCreeper/laravel-blog.git
+```
+
+## 安装依赖
+
+```
+//在项目代码根目录执行
+composer install
+```
+
+除此之外，因为使用了 intervention/image 图片处理扩展包，还需要单独为该扩展包安装所需依赖，[安装方法参考文档](http://sadcreeper.xyz/article/10)
+
+# 安装方法（生产环境）
+
+生产环境的安装方法可参考这篇文章
+
+[在阿里云上部署 Laravel 5.3 （LNMP 环境）](http://dmmylove.space/article/9)
+
+安装完后记得单独为扩展安装依赖
+
+# 扩展包介绍
+- caouecs/laravel-lang （中文语言包）
+- doctrine/dbal （数据库迁移支持包）
+- graham-campbell/markdown （Markdown 解析器）
+- intervention/image （图片处理扩展）
+- mews/captcha （图片验证码）
+- barryvdh/laravel-debugbar （DebugBar 调试工具）
 
 # 更新日志
 
 ## 03-31
 
 - 【功能】+ 文章隐藏（只能通过 url 访问）
-- 【扩展】+ DebugBar 
+- 【扩展】+ DebugBar
 - 【其他】Markdown ajax 解析请求方式由 get 改为 post（解决了文章过长无法解析的问题）
 - 【其他】封面图片如果未上传保存一个默认图片
 - 【BUG】修复了连续长数字/字符超出不换行的 BUG
@@ -120,33 +161,3 @@
 - 【优化】无
 - 【其他】无
 - 【BUG】无
-
-
-
-# Laravel PHP Framework
-
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
