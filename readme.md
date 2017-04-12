@@ -39,13 +39,43 @@ composer install
 
 除此之外，因为使用了 intervention/image 图片处理扩展包，还需要单独为该扩展包安装所需依赖，[安装方法参考文档](http://sadcreeper.xyz/article/10)
 
+## 数据库迁移
+
+```
+//在项目代码根目录执行
+php artisan migrate
+```
+
+## 安装 npm 包
+
+```
+//在项目代码根目录执行
+npm install
+```
+
+`npm install` 通常比较慢，甚至卡死，解决办法：
+
+1. 翻墙
+2. 使用 cnpm
+```
+//先安装 cnpm
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+//之后就可以使用 cnpm install 替代 npm install
+cnpm install
+```
+
+## 编译静态资源
+
+```
+//在项目代码根目录执行
+gulp
+```
+
 # 安装方法（生产环境）
 
 生产环境的安装方法可参考这篇文章
 
 [在阿里云上部署 Laravel 5.3 （LNMP 环境）](http://dmmylove.space/article/9)
-
-安装完后记得单独为扩展安装依赖
 
 # 扩展包介绍
 - caouecs/laravel-lang （中文语言包）
