@@ -26,22 +26,22 @@
             <div class="header">
                 <!-- 电脑显示(>768px) -->
                 <div class="hidden-xs">
-                    <a href="{{ route('admin') }}">管理后台</a>
+                    <a href="{{ route('home') }}"><<返回首页</a>
                 </div>
                 <!-- 手机显示(<768px) -->
                 <div class="visible-xs-block">
-                    <a href="{{ route('admin') }}"><span class="glyphicon glyphicon-cog"></span></a>
+                    <a href="{{ route('home') }}"><<</a>
                 </div>
             </div>
             <ul CLASS="list">
                 <!-- 电脑显示 (>768px) -->
                 <div class="hidden-xs">
-                    <li><a href="{{ route('home') }}"><span class="glyphicon glyphicon-cog"></span>返回首页</a></li>
+                    <li><a href="{{ route('admin') }}"><span class="glyphicon glyphicon-cog"></span>后台面板</a></li>
                     <li><a href="{{ route('article.index') }}"><span class="glyphicon glyphicon-cog"></span>文章管理</a></li>
                 </div>
                 <!-- 手机显示(<768px) -->
                 <div class="visible-xs-block">
-                    <li><a href="{{ route('home') }}">首页</a></li>
+                    <li><a href="{{ route('admin') }}">面板</a></li>
                     <li><a href="{{ route('article.index') }}">文章</a></li>
                 </div>
             </ul>
