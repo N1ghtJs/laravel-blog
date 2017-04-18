@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
 use App\Models\Message;
 
 use Auth;
+
+use App\Mail\NewMessage;
+use Illuminate\Support\Facades\Mail;
 
 class MessagesController extends Controller
 {
@@ -35,6 +39,9 @@ class MessagesController extends Controller
             'user_id' => $user_id,
             'content' => $request->content,
         ]);
+
+        //发送邮件通知
+        Mail::to(User::findOrFail(1))->send(new NewMessage());
 
         session()->flash('success', '留言成功');
         return redirect()->route('messages.index');

@@ -12,7 +12,7 @@ class AdminController extends Controller
     public function index()
     {
         if (Auth::user()->id == 1) {
-            return view('admin.admin');
+            return view('admin.index');
         }
         else {
             session()->flash('warning', '没有权限');
