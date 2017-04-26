@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- 百度联盟 -->
     <meta name="baidu_union_verify" content="1f15878983beeea80c56d8d4ed60aed0">
 
     <!-- CSRF Token -->
