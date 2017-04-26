@@ -12,7 +12,7 @@
                 @foreach ($comment->replys as $reply)
                     <p>
                         <span>
-                            <b>{{ $comment->user->name }}</b>
+                            <b>{{ $reply->user->name }}</b>
                         </span>
                         <span>：{{ $reply->content }}</span>
                     </p>
@@ -26,7 +26,11 @@
         <form class="form-inline" id="replyForm{{$comment->id}}" style="display:none">
             <input type="hidden" name="comment_id" value="{{$comment->id}}">
             <input type="text" name="content" class="form-control">
-            <a class="btn btn-default" id="replyAJAX" data-comment-id="{{$comment->id}}">确定</a>
+            @if(Auth::check())
+                <a class="btn btn-default" id="replyAJAX" data-comment-id="{{$comment->id}}">确定</a>
+            @else
+                <a class="btn btn-primary" href="{{ url('/login') }}">登录后发表</a>
+            @endif
         </form>
         <!-- <form action="{{ route('replys.store') }}" method="post" id="replyForm{{$comment->id}}" class="form-inline" style="display:none">
             {{ csrf_field() }}

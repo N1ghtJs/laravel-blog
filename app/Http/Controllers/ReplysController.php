@@ -23,14 +23,8 @@ class ReplysController extends Controller
             'content' => 'required',
         ]);
 
-        if (Auth::check()) {
-            $user_id = Auth::id();
-        }else{
-            $user_id = 0;
-        }
-
         $reply = Reply::create([
-            'user_id' => $user_id,
+            'user_id' => Auth::id(),
             'comment_id' => $request->comment_id,
             'content' => $request->content,
         ]);

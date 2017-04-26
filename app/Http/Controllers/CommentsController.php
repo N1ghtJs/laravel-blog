@@ -11,6 +11,8 @@ use App\Models\Article;
 use App\Mail\NewComment;
 use Illuminate\Support\Facades\Mail;
 
+use Auth;
+
 class CommentsController extends Controller
 {
     //存储评论
@@ -21,7 +23,7 @@ class CommentsController extends Controller
         ]);
 
         $comment = Comment::create([
-            'article_id' => $request->article_id,
+            'article_id' => Auth::id(),
             'user_id' => $request->user_id,
             'content' => $request->content,
         ]);

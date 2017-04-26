@@ -39,7 +39,6 @@
             {{ csrf_field() }}
             @if(Auth::check())
                 <input type="hidden" name="article_id" value="{{ $article->id }}">
-                <input type="hidden" name="user_id" value="{{ Auth::id() }}">
                 <div class="form-group">
                     <textarea class="form-control" rows="3" name="content"></textarea>
                 </div>
