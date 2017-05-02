@@ -25,7 +25,7 @@ class MessagesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'content' => 'required',
+            'content' => 'required|max:120',
         ]);
 
         //获取 user_id 未登录用户为 0

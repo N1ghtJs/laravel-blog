@@ -4,6 +4,9 @@
 
 @section('content-left')
 
+<!-- 错误提示信息 -->
+@include('shared.errors')
+
 <!-- 最新文章 -->
 <div class="z-panel">
     <div class="z-panel-header" style="text-align: left;">
@@ -18,7 +21,7 @@
         <form action="{{ route('messages.store') }}" method="post" >
             {{ csrf_field() }}
             <div class="form-group">
-                <textarea class="form-control" rows="3" name="content"></textarea>
+                <textarea class="form-control" rows="3" name="content" placeholder="不超过120字"></textarea>
             </div>
             @if(Auth::check())
                 <button type="submit" class="btn btn-default">发表</button>
