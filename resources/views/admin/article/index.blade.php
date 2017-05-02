@@ -15,10 +15,14 @@
             <td><a href="{{ route('article.edit', $article->id) }}">{{ $article->title }}</a></td>
             <td>{{ $article->intro }}</td>
             <td>
-                <!-- 编辑按钮 -->
-                <a href="{{ route('article.edit', $article->id) }}" style="display: inline-block;" title="编辑"><span class="glyphicon glyphicon-edit"></span></a>
+                <!-- 隐藏按钮 -->
+                @if( $article->hidden == 0)
+                    <a href="{{ route('article.hidden', $article->id) }}" style="display: inline-block;" title="隐藏"><span class="glyphicon glyphicon-eye-close" style="color:gray"></span></a>
+                @else
+                    <a href="{{ route('article.hidden', $article->id) }}" style="display: inline-block;" title="隐藏"><span class="glyphicon glyphicon-eye-close" style="color: #F08080;"></span></a>
+                @endif
                 <!-- 删除按钮 -->
-                <button type="submit" style="color: #F08080;background-color: transparent;border: none;" data-toggle="modal" data-target="#deleteArticle" title="删除"><span class="glyphicon glyphicon-minus-sign"></span></button>
+                <button type="submit" style="color: #F08080;background-color: transparent;border: none;padding:0" data-toggle="modal" data-target="#deleteArticle" title="删除"><span class="glyphicon glyphicon-minus-sign"></span></button>
                 <!-- 删除按钮：弹出框 -->
                 <div class="modal fade" id="deleteArticle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                   <div class="modal-dialog modal-sm" role="document">
@@ -38,13 +42,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- 隐藏按钮 -->
-                @if( $article->hidden == 0)
-                    <a href="{{ route('article.hidden', $article->id) }}" style="display: inline-block;" title="隐藏"><span class="glyphicon glyphicon-eye-close" style="color:gray"></span></a>
-                @else
-                    <a href="{{ route('article.hidden', $article->id) }}" style="display: inline-block;" title="隐藏"><span class="glyphicon glyphicon-eye-close" style="color: #F08080;"></span></a>
-                @endif
-
             </td>
         </tr>
     @endforeach
