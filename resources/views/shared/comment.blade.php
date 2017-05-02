@@ -1,5 +1,5 @@
 <!-- 评论 -->
-<div class="">
+<div class="z-comment">
     <p><b>{{ $comment->user->name }}</b></p>
     <p>{{ $comment->content }}</p>
     <p>{{ $comment->created_at }} <a href="javascript:;" style="float:right" id="replyButton" data-comment-id="{{ $comment->id }}">回复</a></p>
