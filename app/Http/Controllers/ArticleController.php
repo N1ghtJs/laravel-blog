@@ -43,6 +43,8 @@ class ArticleController extends Controller
         //搜索文章
         $articles = Article::search($request->key);
 
+        $articles = $articles->appends(['key'=>$request->key]);
+
         session()->flash('success', '搜索完成');
         return view('article.list',compact('articles'));
     }

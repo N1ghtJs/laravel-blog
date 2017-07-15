@@ -22,9 +22,9 @@
                     <a href="{{ route('article.hidden', $article->id) }}" style="display: inline-block;" title="隐藏"><span class="glyphicon glyphicon-eye-close" style="color: #F08080;"></span></a>
                 @endif
                 <!-- 删除按钮 -->
-                <button type="submit" style="color: #F08080;background-color: transparent;border: none;padding:0" data-toggle="modal" data-target="#deleteArticle" title="删除"><span class="glyphicon glyphicon-minus-sign"></span></button>
+                <button type="submit" style="color: #F08080;background-color: transparent;border: none;padding:0" data-toggle="modal" data-target="#deleteArticle{{ $article->id }}" title="删除"><span class="glyphicon glyphicon-minus-sign"></span></button>
                 <!-- 删除按钮：弹出框 -->
-                <div class="modal fade" id="deleteArticle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal fade" id="deleteArticle{{ $article->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                   <div class="modal-dialog modal-sm" role="document">
                     <div class="modal-content" style="text-align:center">
                       <div class="modal-header">
