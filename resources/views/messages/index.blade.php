@@ -26,7 +26,27 @@
             @if(Auth::check())
                 <button type="submit" class="btn btn-default">发表</button>
             @else
-                <button type="submit" class="btn btn-default">匿名发表</button><a class="btn btn-primary" style="margin-left:10px" href="{{ url('/login') }}">登录</a>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#warning">
+                  匿名发表
+                </button>
+                <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">提示：</h4>
+                      </div>
+                      <div class="modal-body">
+                        请勿回复类似 “123” 这样的无意义的留言哦，否则将会被删除，谢谢~
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">确认</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="btn btn-primary" style="margin-left:10px" href="{{ url('/login') }}">登录后发表</a>
             @endif
         </form>
 
