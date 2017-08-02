@@ -24,19 +24,20 @@ Route::get('/article/list', 'ArticleController@list')->name('article.list');
 Route::get('/article/search', 'ArticleController@search')->name('article.search');
 
 //文章资源路由
-Route::resource('article', 'ArticleController', ['only' => 'show']);
+Route::get('article/{article}', 'ArticleController@show')->name('article.show');
 
 //markdown AJAX 解析
 Route::post('/markdown', 'ArticleController@markdown')->name('markdown');
 
 //评论资源路由
-Route::resource('/comments', 'CommentsController', ['only' => ['store']]);
+Route::post('/comments', 'CommentsControll@store')->name('comment.store')->middleware('throttle:5');
 
-//评论资源路由
-Route::resource('/replys', 'ReplysController', ['only' => ['store']]);
+//回复资源路由
+Route::post('/replys', 'ReplysController@store')->name('replys.store')->middleware('throttle:5');
 
 //留言资源路由
-Route::resource('/messages', 'MessagesController', ['only' => ['index','store']]);
+Route::get('messages', 'MessagesController@index')->name('messages.index');
+Route::post('messages', 'MessagesController@store')->name('messages.store')->middleware('throttle:5');
 
 //管理后台
 Route::group(['middleware' => ['auth'],'namespace' => 'Admin','prefix' => 'admin'],function(){
