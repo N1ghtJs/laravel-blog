@@ -21,7 +21,7 @@ class Comment extends Model
         return $this->belongsTo('App\Models\User');
     }
 
-    //模型关联：获取该评论所属的用户模型
+    //模型关联：获取该评论所属的文章模型
     public function article()
     {
         return $this->belongsTo('App\Models\Article');

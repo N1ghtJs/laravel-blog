@@ -30,14 +30,17 @@ Route::get('article/{article}', 'ArticleController@show')->name('article.show');
 Route::post('/markdown', 'ArticleController@markdown')->name('markdown');
 
 //评论资源路由
-Route::post('/comments', 'CommentsControll@store')->name('comments.store')->middleware('throttle:5');
+Route::post('/comments', 'CommentsController@store')->middleware('throttle:5')->name('comments.store');
 
-//回复资源路由
-Route::post('/replys', 'ReplysController@store')->name('replys.store')->middleware('throttle:5');
+//回复（评论）资源路由
+Route::post('/replys', 'ReplysController@store')->middleware('throttle:5')->name('replys.store');
+
+//回复（留言）资源路由
+Route::post('/remessags', 'RemessagesController@store')->middleware('throttle:5')->name('remessages.store');
 
 //留言资源路由
 Route::get('messages', 'MessagesController@index')->name('messages.index');
-Route::post('messages', 'MessagesController@store')->name('messages.store')->middleware('throttle:5');
+Route::post('messages', 'MessagesController@store')->middleware('throttle:5')->name('messages.store');
 
 //管理后台
 Route::group(['middleware' => ['auth'],'namespace' => 'Admin','prefix' => 'admin'],function(){
