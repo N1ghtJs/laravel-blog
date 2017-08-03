@@ -30,7 +30,7 @@ Route::get('article/{article}', 'ArticleController@show')->name('article.show');
 Route::post('/markdown', 'ArticleController@markdown')->name('markdown');
 
 //评论资源路由
-Route::post('/comments', 'CommentsControll@store')->name('comment.store')->middleware('throttle:5');
+Route::post('/comments', 'CommentsControll@store')->name('comments.store')->middleware('throttle:5');
 
 //回复资源路由
 Route::post('/replys', 'ReplysController@store')->name('replys.store')->middleware('throttle:5');
