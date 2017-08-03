@@ -72,10 +72,10 @@
                             @foreach ($comment->replys as $reply)
                                 <p>
                                     <span>
-                                        @if( $comment->user_id == 1)
-                                            <b>{{ $comment->user->name }}</b><span class="label label-primary" style="margin-left:5px">博主</span>
+                                        @if( $reply->user_id == 1)
+                                            <b>{{ $reply->user->name }}</b><span class="label label-primary" style="margin-left:5px">博主</span>
                                         @else
-                                            <b>{{ $comment->user->name }}</b>
+                                            <b>{{ $reply->user->name }}</b>
                                         @endif
                                     </span>
                                     <span>：{{ $reply->content }}</span>

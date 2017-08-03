@@ -85,10 +85,10 @@
                                     <span>
                                         @if( $remessage->user_id == 0)
                                             <b>匿名</b>
-                                        @elseif( $message->user_id == 1)
-                                            <b>{{ $message->user->name }}</b><span class="label label-primary" style="margin-left:5px">博主</span>
+                                        @elseif( $remessage->user_id == 1)
+                                            <b>{{ $remessage->user->name }}</b><span class="label label-primary" style="margin-left:5px">博主</span>
                                         @else
-                                            <b>{{ $message->user->name }}</b>
+                                            <b>{{ $remessage->user->name }}</b>
                                         @endif
                                     </span>
                                     <span>：{{ $remessage->content }}</span>
