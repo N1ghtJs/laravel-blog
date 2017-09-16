@@ -1,5 +1,5 @@
 {{-- 这是两栏布局视图模板：包含了导航栏、巨幕、作者信息侧栏、底部信息栏 --}}
-@extends('layouts.app')
+@extends('layouts.app_imax')
 
 @section('content')
 <div class="row">

@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app_2columns')
 
 @section('title', '文章')
 

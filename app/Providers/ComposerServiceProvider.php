@@ -17,7 +17,7 @@ class ComposerServiceProvider extends ServiceProvider
     {
         // Using class based composers...
         View::composer(
-            'layouts.app2', 'App\Http\ViewComposers\App2Composer'
+            'layouts.app_2columns', 'App\Http\ViewComposers\App2Composer'
         );
 
         // Using Closure based composers...

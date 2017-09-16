@@ -25,6 +25,7 @@
                 @if (Auth::check())
                     @if (Auth::id() === 1)
                         <li><a href="{{ route('admin') }}">管理后台</a></li>
+                        <li><a href="{{ route('todos.index') }}">TODO</a></li>
                     @endif
                 @endif
             </ul>
@@ -66,8 +67,3 @@
         </div>
     </div>
 </nav>
-
-<div class="z-imax-img" style="margin-bottom: 20px;">
-    <img src="/img/header.jpg" class="hidden-xs">
-    <img src="/img/header-phone.jpg" class="visible-xs-block" style="width:100%;margin-top:50px">
-</div>

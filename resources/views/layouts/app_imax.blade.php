@@ -1,4 +1,4 @@
-{{-- 这是公共视图模板：包含了导航栏、巨幕、底部信息栏 --}}
+{{-- 这是带巨幕图的公共视图模板：包含了导航栏、巨幕、底部信息栏 --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +22,10 @@
 <body>
 
     @include('layouts._header')
+    <div class="z-imax-img" style="margin-bottom: 20px;">
+        <img src="/img/header.jpg" class="hidden-xs">
+        <img src="/img/header-phone.jpg" class="visible-xs-block" style="width:100%;margin-top:50px">
+    </div>
 
     <div class="container" id="app"> <!-- id = app : 开启 Vue.js-->
         @include('shared.messages')

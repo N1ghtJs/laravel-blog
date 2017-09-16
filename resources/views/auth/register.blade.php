@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_imax')
 
 @section('title', '注册')
 
