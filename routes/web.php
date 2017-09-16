@@ -28,6 +28,8 @@ Route::get('article/{article}', 'ArticleController@show')->name('article.show');
 
 //markdown AJAX 解析
 Route::post('/markdown', 'ArticleController@markdown')->name('markdown');
+//markdown AJAX 获取文章内容
+Route::get('/markdown/{article}', 'ArticleController@markdown_article')->name('markdown.article');
 
 //评论资源路由
 Route::post('/comments', 'CommentsController@store')->middleware('throttle:5')->name('comments.store');

@@ -16,7 +16,7 @@ class ArticleController extends Controller
         $article = Article::findOrFail($id);
 
         //markdown 解析
-        $article->content = Markdown::convertToHtml($article->content);
+        //$article->content = Markdown::convertToHtml($article->content);
 
         //更新浏览量
         Article::update_view($id);
@@ -53,5 +53,12 @@ class ArticleController extends Controller
     public function markdown(Request $request)
     {
         return Markdown::convertToHtml($request->content);
+    }
+
+    //markdown AJAX 获取文章内容
+    public function markdown_article($article_id)
+    {
+        $article = Article::findOrFail($article_id);
+        return Markdown::convertToHtml($article->content);
     }
 }

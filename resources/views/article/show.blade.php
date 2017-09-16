@@ -28,8 +28,8 @@
     </div>
     <div class="z-panel-body" style="padding:20px;">
         <!-- 文章内容显示 markdown -->
-        <div class="markdown">
-            {!! $article->content !!}
+        <div id="markdownContent" class="markdown">
+            加载中...
         </div>
 
         <!-- 评论表单-->
@@ -117,6 +117,19 @@
 @section('script')
 <script>
 $(document).ready(function(){
+    //显示文章内容（必须用AJAX，否则包含 script 代码的内容会被服务器拦截）
+    $('#markdownContent').html()
+    $.ajax({
+        url: "/markdown/{{ $article->id }}",
+        type: "get",
+        success: function(res){
+            //console.log(res);
+            $('#markdownContent').html(res);
+        },
+        error: function(err){
+            console.log(err.responseText);
+        }
+    });
     //显示回复框函数
     $('a#replyButton').click(function(){
         //获取点击的 comment id
