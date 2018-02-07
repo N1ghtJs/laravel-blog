@@ -1,10 +1,11 @@
 # Laravel-blog
 基于 Laravel 5.3 的个人博客系统
 
-演示地址：http://dmmylove.cn
-         http://123.207.171.47/
+演示地址：http://dmmylove.cn:8080
 
 如果你喜欢这个开源项目，记得在右上角点个 star 哦，谢谢：）
+
+2018-02-07更新：这个项目停更了，最近重构了一个新版本的博客：[laravel-blog-v2](https://github.com/SadCreeper/laravel-blog-v2)
 
 # 安装方法（开发环境）
 
